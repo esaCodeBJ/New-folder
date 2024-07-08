@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <template id="assets_backend" name="Assets">
+        <t t-call-assets="web.assets_frontend"/>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito" rel="stylesheet"/>
+
+        
+    </template>
+    <template id="esa_auth.template_register" name="Page d'inscription">
+        <t t-call="website.layout">
+            <div class="signup-form">
+                <h2>Inscription</h2>
+                <p class="text-center">Inscrivez-vous sur notre plateforme </p>
+                <form action="#" method="post">                    
+                    <div class="form-group mb-3">
+                        <label class="mb-2" for="fullName ">Nom complet :</label>
+                        <input type="text" id="fullName" class="form-control" placeholder="Nom complet" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="mb-2" for="email">Adresse e-mail :</label>
+                        <input type="email" id="email" class="form-control" placeholder="Adresse e-mail" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="mb-2" for="password">Mot de passe :</label>
+                        <input type="password" id="password" class="form-control" placeholder="Mot de passe" />
+                    </div>
+                    <div class="form-group mb-3">
+                        <label class="mb-2" for="confirmPassword">Confirmer le mot de passe :</label>
+                        <input type="password" id="confirmPassword" class="form-control" placeholder="Confirmer le mot de passe" />
+                    </div>
+                    <div class="text-center">
+                        <button type="button" onclick="submitRegisterForm()" class="btn btn-primary rounded ">S'inscrire</button>
+
+
+                    </div>
+                </form>
+            </div>
+            <div class="already-account">
+                <p>Vous avez déjà un compte ? <a href="/web/login">Connectez-vous ici</a></p>
+            </div>
+            <div id="errorMessageModal" class="modal custom-modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <!-- <h2 class="modal-title"></h2> -->
+                            <!-- <button type="button" class="btn-close close-btn" data-bs-dismiss="modal" aria-label="Fermer"> </button> -->
+                        </div>
+                        <div class="modal-body" id="errorMessageContent">
+                            <p class="error-message text-center"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+           
+           
+        </t>
+    </template>
+
+    
+</odoo>

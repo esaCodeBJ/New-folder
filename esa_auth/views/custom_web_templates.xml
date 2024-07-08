@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+
+    <!-- Code pour supprimer le bouton de superutilisateur et ajouter le button de redirection à la page inscription-->
+    <template id="custom_login_template" inherit_id="web.login">
+        <!-- Code précédent pour ajouter le lien d'inscription -->
+        <xpath expr="//form[hasclass('oe_login_form')]" position="after">
+            <div class="text-center">
+                <a href="/register" class="btn btn-link">Vous n'avez pas de compte ?</a>
+            </div>
+        </xpath>
+        <!-- Nouveau code pour supprimer le bouton de superutilisateur -->
+        <xpath expr="//t[@t-if='debug']/button[@name='redirect']" position="replace"/>
+    </template>
+</odoo>

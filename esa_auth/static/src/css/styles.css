@@ -1,0 +1,27 @@
+/* Custom styles.css */
+
+body {
+    font-family: 'Nunito', sans-serif !important;
+} 
+
+.signup-form {
+    width: 100%;
+    max-width: 400px;
+    padding: 15px;
+    margin: auto;
+}
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+.already-account {
+    text-align: center;
+    margin-top: 20px;
+}
+.already-account a {
+    text-decoration: none;
+    color: #007bff;
+}
+.already-account a:hover {
+    text-decoration: underline;
+}
